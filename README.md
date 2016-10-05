@@ -25,6 +25,12 @@ Esto implica que cuando se realiza alguna de estas operaciones sobre un socket, 
 
 En muchas ocasiones es recomendable emplear algún mecanismo que nos permita realizar estas operaciones de forma no bloqueante y así poder realizar otras tareas en vez de esperar a que los datos estén disponibles. En esta práctica vamos a ver algunos de los mecanismos que existen para poder realizar operaciones de entrada/salida no bloqueantes sobre sockets, en concreto, los mecanismos de polling y los mecanismos asíncronos.
 
+En esta práctica dispone de todos los ficheros necesarios para probar un servidor concurrente. Para descargarlo, usa el siguiente comando:
+
+ ```
+ git -c http.sslVerify=false clone https://gitlab.pervasive.it.uc3m.es/aptel/sockets3_concurrent_servers_polling_select.git
+ ```
+
 ### La función `fcntl()` y los mecanismos de polling
 La función `fcntl()` es una función de control que nos permite realizar diferentes operaciones sobre descriptores (de ficheros, de sockets,...) en general. El prototipo de la función es el siguiente:
 
@@ -86,8 +92,8 @@ telnet localhost 9999
 
 Normalmente a un programa servidor se conectan varios clientes simultáneamente y, por ello, nuestros programas deben estar preparados para esta circunstancia. Para implementar esto tenemos dos posibles opciones:
 
-- 1 Crear un nuevo proceso o hilo por cada cliente que llegue, que es lo que hemos visto en la práctica anterior de sockets.
-- 2 Utilizar la llamada select(), que vamos a ver ahora en detalle. 
+1. Crear un nuevo proceso o hilo por cada cliente que llegue, que es lo que hemos visto en la práctica anterior de sockets.
+2. Utilizar la llamada select(), que vamos a ver ahora en detalle. 
 
 La llamada `select()` nos permite comprobar el estado de varios sockets al mismo tiempo. Con ella podemos saber qué sockets de los que maneja nuestro programa están listos para leer datos, para escribir datos, cuáles reciben conexiones, cuáles generan excepciones... 
 
@@ -123,6 +129,6 @@ Cada servidor tiene sus propios clientes de eco, y la forma de diferenciar si es
 
 Compila el ejemplo y pruébalo con varios clientes.
 
-* a ¿Cuántos clientes atiende cada proceso? ¿Cuántos clientes se podrían atender de forma concurrente?
-* b Decrementa el número de procesos (`MAXPROCESSES`) que pre-lanza el servidor, por ejemplo a 2. Compila smart-select.c nuevamente, lanza 5 clientes, ¿Qué ocurre con el quinto?
+1. ¿Cuántos clientes atiende cada proceso? ¿Cuántos clientes se podrían atender de forma concurrente?
+1. Decrementa el número de procesos (`MAXPROCESSES`) que pre-lanza el servidor, por ejemplo a 2. Compila smart-select.c nuevamente, lanza 5 clientes, ¿Qué ocurre con el quinto?
 
