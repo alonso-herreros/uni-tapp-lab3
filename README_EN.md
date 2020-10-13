@@ -56,7 +56,7 @@ We now know how to ensure that input/output operations are non-blocking but how 
 > When an input/output operation on a non-blocking socket cannot be completed, the call to the input/output function returns an error code (-1) and assigns the value EWOULDBLOCK to the variable errno (recall that it is always necessary to check the number of bytes returned by these calls, since it does not always coincide with the number of bytes that we wanted to read or write). 
 > In order to find out when there is data available to be read, a polling mechanism, by which the socket is regularly checked to see if data has arrived, is often used. Each time the socket is polled, if no data is available other tasks can be carried out.
 
-### 1.	Using the code provided for the [second sockets lab exercise](https://gitlab.pervasive.it.uc3m.es/aptel/sockets2_concurrent_servers) modify the client so that it can perform non-blocking input/output operations and so that it uses a polling mechanism to check the availability of data when performing read operations.
+### 1.	Using the code provided for the [third sockets lab exercise](https://gitlab.pervasive.it.uc3m.es/aptel/sockets2_concurrent_servers) modify the client so that it can perform non-blocking input/output operations and so that it uses a polling mechanism to check the availability of data when performing read operations.
 
 In order to manifest this behaviour, make the client print the value of a counter to the screen, where this counter is incremented each time the program has to wait for data to be returned by the server (that is, each time it performs a read operation). Compile the code and execute it using the echo server of the previous lab exercise.
 
