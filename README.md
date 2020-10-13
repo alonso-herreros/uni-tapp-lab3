@@ -53,7 +53,7 @@ De esta forma ya sabemos cómo activar que las operaciones de lectura y escritur
 
 > Cuando el socket no es bloqueante, si al realizar una operación de lectura o escritura ésta no se puede completar, la llamada devuelve un error (`-1`) y le asignará a la variable `errno` el valor `EWOULDBLOCK` (de todas formas, recordad, que es necesario comprobar el número de bytes que devuelven estas llamadas, porque no siempre coincide con el número de bytes que queríamos leer o escribir). Así, para saber cuando existen datos disponibles se suele utilizar un mecanismo de "encuesta", denominado polling, en el que se consulta continuamente cuándo existen datos disponibles y si no los hay, se realizan otras tareas.
 
-### 1. Utilizando el código de la [práctica 2](https://gitlab.pervasive.it.uc3m.es/aptel/sockets2_concurrent_servers) modifica el cliente para que se puedan realizar operaciones de entrada/salida no bloqueantes, y emplea un mecanismo de polling para saber si existen datos disponibles cuando se realizan operaciones de lectura.
+### 1. Utilizando el código de la [práctica 3](https://gitlab.pervasive.it.uc3m.es/aptel/sockets2_concurrent_servers) modifica el cliente para que se puedan realizar operaciones de entrada/salida no bloqueantes, y emplea un mecanismo de polling para saber si existen datos disponibles cuando se realizan operaciones de lectura.
 
 Para ver este comportamiento, haz que se imprima en pantalla un contador, que se incremente cada vez que el programa tiene que esperar por los datos que devuelve el servidor (operación de lectura). Compila el código y ejecútalo utilizando el servidor de eco concurrente de la práctica anterior.
 
