@@ -25,7 +25,7 @@ Esto implica que cuando se realiza alguna de estas operaciones sobre un socket, 
 
 En muchas ocasiones es recomendable emplear algún mecanismo que nos permita realizar estas operaciones de forma no bloqueante y así poder realizar otras tareas en vez de esperar a que los datos estén disponibles. En esta práctica vamos a ver algunos de los mecanismos que existen para poder realizar operaciones de entrada/salida no bloqueantes sobre sockets, en concreto, los mecanismos de polling y los mecanismos asíncronos.
 
-Para esta práctica **usaremos al comienzo los ficheros de código de la práctica anterior** pero hay ciertos ficheros nuevos que podrás descargar usando el siguiente comando:
+Para esta práctica **usaremos al comienzo los ficheros de código de la práctica [sockets2]((https://gitlab.gast.it.uc3m.es/aptel/sockets2_concurrent_servers))** pero hay ciertos ficheros nuevos que podrás descargar usando el siguiente comando:
 
  ```
  git clone https://gitlab.gast.it.uc3m.es/aptel/sockets3_concurrent_servers_polling_select.git
