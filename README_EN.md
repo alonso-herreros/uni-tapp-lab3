@@ -16,9 +16,9 @@ The sockets assignment is divided into the following three parts:
 
 ## Blocking and non-blocking input/output
 
-This assignement relies on the [previous assignment sockets2]((https://gitlab.pervasive.it.uc3m.es/aptel/sockets2_concurrent_servers)), but there are some new code that will be used later. The new code can be downloaded this way:
+This assignement relies on the [previous assignment sockets2]((https://gitlab.gast.it.uc3m.es/aptel/sockets2_concurrent_servers)), but there are some new code that will be used later. The new code can be downloaded this way:
  ```
- git -c http.sslVerify=false clone https://gitlab.pervasive.it.uc3m.es/aptel/sockets3_concurrent_servers_polling_select.git
+ git clone https://gitlab.gast.it.uc3m.es/aptel/sockets3_concurrent_servers_polling_select.git
  ```
 
 
