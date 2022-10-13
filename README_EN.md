@@ -85,11 +85,11 @@ Asynchronous mechanisms use the occurrence of this signal to know when data is a
 
 As we saw in the previous lab session, a signal handler for a given signal is a function specifying the actions to be carried out when that signal occurs. The `SIGIO` signal handler will perform operations of the type: read any data available in the input buffer of the socket, send any data that the application is waiting to send via the socket, accept any new clients that wish to establish to establish a connection.
 
-### 2.	The code demand-accept.c is a simple example of a server that uses a `SIGIO` handler to detect when new clients connect. When the signal is generated, the handler accepts the connection of a new client, sends a message to this client and then closes the connection. Compile and test this code with a telnet client:
+### 2.	The code demand-accept.c is a simple example of a server that uses a `SIGIO` handler to detect when new clients connect. When the signal is generated, the handler accepts the connection of a new client, sends a message to this client and then closes the connection. Compile and test this code, executing the server (demand-accept) and a telnet client:
 
-execute 
+execute in a shell
 ```
-telnet localhost 9999 in a shell
+telnet localhost 9999 
 ```
 
 ## Controlling several descriptors using the select call
