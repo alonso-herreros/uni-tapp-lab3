@@ -32,7 +32,6 @@
 #include <resolv.h>
 #include <unistd.h>
 #include <signal.h>
-#include <sys/time.h>
 
 #define MAXPROCESSES	5
 #define MAXCONNECTIONS	2
