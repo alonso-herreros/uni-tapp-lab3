@@ -24,7 +24,11 @@
 /*****************************************************************************/
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/wait.h>
 #include <resolv.h>
 #include <unistd.h>
 #include <signal.h>
