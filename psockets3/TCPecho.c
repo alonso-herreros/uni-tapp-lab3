@@ -86,18 +86,22 @@ main(int argc, char *argv[])
 	if (s < 0)
 		errexit("can't create socket: %s\n", strerror(errno));
 
-    if ( fcntl(s, F_SETFL, O_NONBLOCK) <0 )
-        errexit("fnctl: could not set non-blocking operations");
-
 //	if (setsockopt(s,SOL_TCP,TCP_NODELAY,&no_nagle, sizeof(no_nagle)) != 0)
 //		errexit("setsockopt: no pude deshabilitar Nagle");
 
         /* Connect the socket */
+    /* It's better to connect BEFORE setting non-block. We WANT to wait here */
 	if (connect(s, (struct sockaddr *)&sin, sizeof(sin)) < 0) {
-        if (errno != EINPROGRESS)
-            errexit("can't connect to %s:%s: %s\n", host, port,
-                    strerror(errno));
+        /* Necessary if you set nonblock before connecting, but it's not safe */
+        /* if (errno != EINPROGRESS) */
+        errexit("can't connect to %s:%s: %s\n", host, port,
+            strerror(errno));
     }
+
+    /* Set the socket to non-blockin operation mode */
+    if ( fcntl(s, F_SETFL, O_NONBLOCK) <0 )
+        errexit("fnctl: could not set non-blocking operations");
+
 	/* don't even think of using other function than fgets for this */
 	while (fgets(buf, LINELEN+1, stdin)) {
 		buf[LINELEN] = '\0';	/* insure line null-terminated	*/
