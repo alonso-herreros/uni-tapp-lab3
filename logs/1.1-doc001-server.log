@@ -1,0 +1,6 @@
+[2024-10-10, 19:02:02] ./TCPechod 8990
+Parent: Waiting for incomming connections at port 8990
+Parent: Incomming connection from 163.117.144.101 remote port 43372
+Parent: Waiting for incomming connections at port 8990
+	child 23909 : receiving data: 
+asdf

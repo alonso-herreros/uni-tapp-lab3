@@ -10,6 +10,7 @@
 
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <fcntl.h>
 
 #include <netdb.h>
 #include <string.h>
@@ -85,13 +86,18 @@ main(int argc, char *argv[])
 	if (s < 0)
 		errexit("can't create socket: %s\n", strerror(errno));
 
+    if ( fcntl(s, F_SETFL, O_NONBLOCK) <0 )
+        errexit("fnctl: could not set non-blocking operations");
+
 //	if (setsockopt(s,SOL_TCP,TCP_NODELAY,&no_nagle, sizeof(no_nagle)) != 0)
 //		errexit("setsockopt: no pude deshabilitar Nagle");
 
         /* Connect the socket */
-	if (connect(s, (struct sockaddr *)&sin, sizeof(sin)) < 0)
-		errexit("can't connect to %s.%s: %s\n", host, port,
-			strerror(errno));
+	if (connect(s, (struct sockaddr *)&sin, sizeof(sin)) < 0) {
+        if (errno != EINPROGRESS)
+            errexit("can't connect to %s:%s: %s\n", host, port,
+                    strerror(errno));
+    }
 	/* don't even think of using other function than fgets for this */
 	while (fgets(buf, LINELEN+1, stdin)) {
 		buf[LINELEN] = '\0';	/* insure line null-terminated	*/
@@ -101,10 +107,15 @@ main(int argc, char *argv[])
 
 		/* read it back */
 		for (inchars = 0; inchars < outchars; inchars+=n ) {
-		  n = read(s, &buf[inchars], outchars - inchars);
-			if (n < 0)
-				errexit("socket read failed: %s\n",
-					strerror(errno));
+            int wait_counter = 0;
+            while (n = read(s, &buf[inchars], outchars - inchars) < 0) {
+                if (errno == EWOULDBLOCK) {
+                    printf("Waiting... (counter: %d)\n", ++wait_counter);
+                    continue;
+                }
+                else
+                    errexit("socket read failed: %s\n", strerror(errno));
+            }
 		}
 		/* write answer to the console */
 		fputs(buf, stdout);
