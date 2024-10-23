@@ -2,3 +2,5 @@
 TCPecho
 TCPechod
 TCPechod_noreaper
+demand-accept
+smart-select
