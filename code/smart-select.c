@@ -33,7 +33,7 @@
 #include <unistd.h>
 #include <signal.h>
 
-#define MAXPROCESSES	5
+#define MAXPROCESSES	2
 #define MAXCONNECTIONS	2
 
 int NumChildren=0;

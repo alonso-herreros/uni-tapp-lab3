@@ -1,0 +1,15 @@
+[2024-10-23, 13:43:27] tcpdump -l port 9999
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+13:43:29.029387 IP vit002.lab.it.uc3m.es.41426 > vit001.9999: Flags [S], seq 1969166545, win 64240, options [mss 1460,sackOK,TS val 89794163 ecr 0], length 0
+13:43:29.029477 IP vit001.9999 > vit002.lab.it.uc3m.es.41426: Flags [S.], seq 3299726162, ack 1969166546, win 65160, options [mss 1460,sackOK,TS val 3516795474 ecr 89794163], length 0
+13:43:29.029723 IP vit002.lab.it.uc3m.es.41426 > vit001.9999: Flags [.], ack 1, win 64240, options [nop,nop,TS val 89794164 ecr 3516795474], length 0
+13:43:29.029890 IP vit001.9999 > vit002.lab.it.uc3m.es.41426: Flags [P.], seq 1:17, ack 1, win 65160, options [nop,nop,TS val 3516795474 ecr 89794164], length 16
+13:43:29.029937 IP vit001.9999 > vit002.lab.it.uc3m.es.41426: Flags [F.], seq 17, ack 1, win 65160, options [nop,nop,TS val 3516795474 ecr 89794164], length 0
+13:43:29.030093 IP vit002.lab.it.uc3m.es.41426 > vit001.9999: Flags [.], ack 17, win 64224, options [nop,nop,TS val 89794164 ecr 3516795474], length 0
+13:43:29.038348 IP vit002.lab.it.uc3m.es.41426 > vit001.9999: Flags [F.], seq 1, ack 18, win 64223, options [nop,nop,TS val 89794172 ecr 3516795474], length 0
+13:43:29.038363 IP vit001.9999 > vit002.lab.it.uc3m.es.41426: Flags [.], ack 2, win 65159, options [nop,nop,TS val 3516795482 ecr 89794172], length 0
+
+8 packets captured
+8 packets received by filter
+0 packets dropped by kernel

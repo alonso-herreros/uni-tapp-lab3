@@ -1,0 +1,80 @@
+[2024-10-23, 14:07:16] tcpdump -l port 9999
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+14:07:21.464133 IP vit002.lab.it.uc3m.es.50090 > vit001.9999: Flags [S], seq 2400198834, win 64240, options [mss 1460,sackOK,TS val 91226598 ecr 0], length 0
+14:07:21.464215 IP vit001.9999 > vit002.lab.it.uc3m.es.50090: Flags [S.], seq 961729762, ack 2400198835, win 65160, options [mss 1460,sackOK,TS val 3518227908 ecr 91226598], length 0
+14:07:21.464504 IP vit002.lab.it.uc3m.es.50090 > vit001.9999: Flags [.], ack 1, win 64240, options [nop,nop,TS val 91226598 ecr 3518227908], length 0
+14:07:23.721870 IP vit002.lab.it.uc3m.es.50090 > vit001.9999: Flags [P.], seq 1:8, ack 1, win 64240, options [nop,nop,TS val 91228855 ecr 3518227908], length 7
+14:07:23.721924 IP vit001.9999 > vit002.lab.it.uc3m.es.50090: Flags [.], ack 8, win 65153, options [nop,nop,TS val 3518230166 ecr 91228855], length 0
+14:07:23.722045 IP vit001.9999 > vit002.lab.it.uc3m.es.50090: Flags [P.], seq 1:8, ack 8, win 65153, options [nop,nop,TS val 3518230166 ecr 91228855], length 7
+14:07:23.722341 IP vit002.lab.it.uc3m.es.50090 > vit001.9999: Flags [.], ack 8, win 64233, options [nop,nop,TS val 91228856 ecr 3518230166], length 0
+14:07:30.898127 IP vit003.lab.it.uc3m.es.60520 > vit001.9999: Flags [S], seq 1118031159, win 64240, options [mss 1460,sackOK,TS val 3446574495 ecr 0], length 0
+14:07:30.898193 IP vit001.9999 > vit003.lab.it.uc3m.es.60520: Flags [S.], seq 1966360114, ack 1118031160, win 65160, options [mss 1460,sackOK,TS val 4264784852 ecr 3446574495], length 0
+14:07:30.898396 IP vit003.lab.it.uc3m.es.60520 > vit001.9999: Flags [.], ack 1, win 64240, options [nop,nop,TS val 3446574496 ecr 4264784852], length 0
+14:07:35.695086 IP vit004.lab.it.uc3m.es.40536 > vit001.9999: Flags [S], seq 1750820318, win 64240, options [mss 1460,sackOK,TS val 1813049805 ecr 0], length 0
+14:07:35.695192 IP vit001.9999 > vit004.lab.it.uc3m.es.40536: Flags [S.], seq 2870791835, ack 1750820319, win 65160, options [mss 1460,sackOK,TS val 2243536492 ecr 1813049805], length 0
+14:07:35.695468 IP vit004.lab.it.uc3m.es.40536 > vit001.9999: Flags [.], ack 1, win 64240, options [nop,nop,TS val 1813049806 ecr 2243536492], length 0
+14:07:39.057839 IP vit003.lab.it.uc3m.es.60520 > vit001.9999: Flags [P.], seq 1:8, ack 1, win 64240, options [nop,nop,TS val 3446582656 ecr 4264784852], length 7
+14:07:39.057887 IP vit001.9999 > vit003.lab.it.uc3m.es.60520: Flags [.], ack 8, win 65153, options [nop,nop,TS val 4264793012 ecr 3446582656], length 0
+14:07:39.057996 IP vit001.9999 > vit003.lab.it.uc3m.es.60520: Flags [P.], seq 1:8, ack 8, win 65153, options [nop,nop,TS val 4264793012 ecr 3446582656], length 7
+14:07:39.058274 IP vit003.lab.it.uc3m.es.60520 > vit001.9999: Flags [.], ack 8, win 64233, options [nop,nop,TS val 3446582656 ecr 4264793012], length 0
+14:07:45.858856 IP vit004.lab.it.uc3m.es.40536 > vit001.9999: Flags [P.], seq 1:8, ack 1, win 64240, options [nop,nop,TS val 1813059969 ecr 2243536492], length 7
+14:07:45.858937 IP vit001.9999 > vit004.lab.it.uc3m.es.40536: Flags [.], ack 8, win 65153, options [nop,nop,TS val 2243546656 ecr 1813059969], length 0
+14:07:45.859124 IP vit001.9999 > vit004.lab.it.uc3m.es.40536: Flags [P.], seq 1:8, ack 8, win 65153, options [nop,nop,TS val 2243546656 ecr 1813059969], length 7
+14:07:45.859382 IP vit004.lab.it.uc3m.es.40536 > vit001.9999: Flags [.], ack 8, win 64233, options [nop,nop,TS val 1813059970 ecr 2243546656], length 0
+14:07:51.454264 IP vit005.lab.it.uc3m.es.54934 > vit001.9999: Flags [S], seq 2087677831, win 64240, options [mss 1460,sackOK,TS val 3949536828 ecr 0], length 0
+14:07:51.454332 IP vit001.9999 > vit005.lab.it.uc3m.es.54934: Flags [S.], seq 3850189332, ack 2087677832, win 65160, options [mss 1460,sackOK,TS val 3950419987 ecr 3949536828], length 0
+14:07:51.454656 IP vit005.lab.it.uc3m.es.54934 > vit001.9999: Flags [.], ack 1, win 64240, options [nop,nop,TS val 3949536829 ecr 3950419987], length 0
+14:07:55.292952 IP vit006.lab.it.uc3m.es.56904 > vit001.9999: Flags [S], seq 2271762780, win 64240, options [mss 1460,sackOK,TS val 4261987116 ecr 0], length 0
+14:07:55.293030 IP vit001.9999 > vit006.lab.it.uc3m.es.56904: Flags [S.], seq 1252313188, ack 2271762781, win 65160, options [mss 1460,sackOK,TS val 1962652289 ecr 4261987116], length 0
+14:07:55.293220 IP vit006.lab.it.uc3m.es.56904 > vit001.9999: Flags [.], ack 1, win 64240, options [nop,nop,TS val 4261987117 ecr 1962652289], length 0
+14:07:57.596993 IP vit007.lab.it.uc3m.es.48408 > vit001.9999: Flags [S], seq 1228859323, win 64240, options [mss 1460,sackOK,TS val 2787299701 ecr 0], length 0
+14:07:57.597087 IP vit001.9999 > vit007.lab.it.uc3m.es.48408: Flags [S.], seq 2876271155, ack 1228859324, win 65160, options [mss 1460,sackOK,TS val 2366602553 ecr 2787299701], length 0
+14:07:57.597380 IP vit007.lab.it.uc3m.es.48408 > vit001.9999: Flags [.], ack 1, win 64240, options [nop,nop,TS val 2787299702 ecr 2366602553], length 0
+14:07:59.731934 IP vit008.lab.it.uc3m.es.35494 > vit001.9999: Flags [S], seq 3180275225, win 64240, options [mss 1460,sackOK,TS val 4277115798 ecr 0], length 0
+14:07:59.732013 IP vit001.9999 > vit008.lab.it.uc3m.es.35494: Flags [S.], seq 1475995597, ack 3180275226, win 65160, options [mss 1460,sackOK,TS val 3173797198 ecr 4277115798], length 0
+14:07:59.732309 IP vit008.lab.it.uc3m.es.35494 > vit001.9999: Flags [.], ack 1, win 64240, options [nop,nop,TS val 4277115799 ecr 3173797198], length 0
+14:08:07.101698 IP vit005.lab.it.uc3m.es.54934 > vit001.9999: Flags [P.], seq 1:8, ack 1, win 64240, options [nop,nop,TS val 3949552476 ecr 3950419987], length 7
+14:08:07.101754 IP vit001.9999 > vit005.lab.it.uc3m.es.54934: Flags [.], ack 8, win 65153, options [nop,nop,TS val 3950435635 ecr 3949552476], length 0
+14:08:07.101929 IP vit001.9999 > vit005.lab.it.uc3m.es.54934: Flags [P.], seq 1:8, ack 8, win 65153, options [nop,nop,TS val 3950435635 ecr 3949552476], length 7
+14:08:07.102264 IP vit005.lab.it.uc3m.es.54934 > vit001.9999: Flags [.], ack 8, win 64233, options [nop,nop,TS val 3949552477 ecr 3950435635], length 0
+14:08:10.604269 IP vit006.lab.it.uc3m.es.56904 > vit001.9999: Flags [P.], seq 1:8, ack 1, win 64240, options [nop,nop,TS val 4262002428 ecr 1962652289], length 7
+14:08:10.604297 IP vit001.9999 > vit006.lab.it.uc3m.es.56904: Flags [.], ack 8, win 65153, options [nop,nop,TS val 1962667600 ecr 4262002428], length 0
+14:08:10.604447 IP vit001.9999 > vit006.lab.it.uc3m.es.56904: Flags [P.], seq 1:8, ack 8, win 65153, options [nop,nop,TS val 1962667601 ecr 4262002428], length 7
+14:08:10.604709 IP vit006.lab.it.uc3m.es.56904 > vit001.9999: Flags [.], ack 8, win 64233, options [nop,nop,TS val 4262002429 ecr 1962667601], length 0
+14:08:13.612704 IP vit007.lab.it.uc3m.es.48408 > vit001.9999: Flags [P.], seq 1:8, ack 1, win 64240, options [nop,nop,TS val 2787315718 ecr 2366602553], length 7
+14:08:13.612785 IP vit001.9999 > vit007.lab.it.uc3m.es.48408: Flags [.], ack 8, win 65153, options [nop,nop,TS val 2366618569 ecr 2787315718], length 0
+14:08:13.612941 IP vit001.9999 > vit007.lab.it.uc3m.es.48408: Flags [P.], seq 1:8, ack 8, win 65153, options [nop,nop,TS val 2366618569 ecr 2787315718], length 7
+14:08:13.613299 IP vit007.lab.it.uc3m.es.48408 > vit001.9999: Flags [.], ack 8, win 64233, options [nop,nop,TS val 2787315718 ecr 2366618569], length 0
+14:08:18.058667 IP vit008.lab.it.uc3m.es.35494 > vit001.9999: Flags [P.], seq 1:8, ack 1, win 64240, options [nop,nop,TS val 4277134125 ecr 3173797198], length 7
+14:08:18.058780 IP vit001.9999 > vit008.lab.it.uc3m.es.35494: Flags [.], ack 8, win 65153, options [nop,nop,TS val 3173815525 ecr 4277134125], length 0
+14:08:18.058965 IP vit001.9999 > vit008.lab.it.uc3m.es.35494: Flags [P.], seq 1:8, ack 8, win 65153, options [nop,nop,TS val 3173815525 ecr 4277134125], length 7
+14:08:18.059519 IP vit008.lab.it.uc3m.es.35494 > vit001.9999: Flags [.], ack 8, win 64233, options [nop,nop,TS val 4277134126 ecr 3173815525], length 0
+14:08:27.435610 IP vit002.lab.it.uc3m.es.50090 > vit001.9999: Flags [P.], seq 8:16, ack 8, win 64233, options [nop,nop,TS val 91292569 ecr 3518230166], length 8
+14:08:27.435880 IP vit001.9999 > vit002.lab.it.uc3m.es.50090: Flags [P.], seq 8:16, ack 16, win 65145, options [nop,nop,TS val 3518293880 ecr 91292569], length 8
+14:08:27.436208 IP vit002.lab.it.uc3m.es.50090 > vit001.9999: Flags [.], ack 16, win 64225, options [nop,nop,TS val 91292570 ecr 3518293880], length 0
+14:09:09.830946 IP vit001.9999 > vit006.lab.it.uc3m.es.56904: Flags [F.], seq 8, ack 8, win 65153, options [nop,nop,TS val 1962726827 ecr 4262002429], length 0
+14:09:09.831057 IP vit001.9999 > vit007.lab.it.uc3m.es.48408: Flags [F.], seq 8, ack 8, win 65153, options [nop,nop,TS val 2366674787 ecr 2787315718], length 0
+14:09:09.831090 IP vit001.9999 > vit008.lab.it.uc3m.es.35494: Flags [F.], seq 8, ack 8, win 65153, options [nop,nop,TS val 3173867297 ecr 4277134126], length 0
+14:09:09.831136 IP vit001.9999 > vit004.lab.it.uc3m.es.40536: Flags [F.], seq 8, ack 8, win 65153, options [nop,nop,TS val 2243630628 ecr 1813059970], length 0
+14:09:09.831405 IP vit001.9999 > vit003.lab.it.uc3m.es.60520: Flags [F.], seq 8, ack 8, win 65153, options [nop,nop,TS val 4264883785 ecr 3446582656], length 0
+14:09:09.831539 IP vit001.9999 > vit002.lab.it.uc3m.es.50090: Flags [F.], seq 16, ack 16, win 65145, options [nop,nop,TS val 3518336275 ecr 91292570], length 0
+14:09:09.831596 IP vit001.9999 > vit005.lab.it.uc3m.es.54934: Flags [F.], seq 8, ack 8, win 65153, options [nop,nop,TS val 3950498365 ecr 3949552477], length 0
+14:09:09.831871 IP vit006.lab.it.uc3m.es.56904 > vit001.9999: Flags [F.], seq 8, ack 9, win 64232, options [nop,nop,TS val 4262061655 ecr 1962726827], length 0
+14:09:09.831925 IP vit001.9999 > vit006.lab.it.uc3m.es.56904: Flags [.], ack 9, win 65152, options [nop,nop,TS val 1962726828 ecr 4262061655], length 0
+14:09:09.832181 IP vit008.lab.it.uc3m.es.35494 > vit001.9999: Flags [F.], seq 8, ack 9, win 64232, options [nop,nop,TS val 4277185899 ecr 3173867297], length 0
+14:09:09.832181 IP vit007.lab.it.uc3m.es.48408 > vit001.9999: Flags [F.], seq 8, ack 9, win 64232, options [nop,nop,TS val 2787371937 ecr 2366674787], length 0
+14:09:09.832181 IP vit004.lab.it.uc3m.es.40536 > vit001.9999: Flags [F.], seq 8, ack 9, win 64232, options [nop,nop,TS val 1813143942 ecr 2243630628], length 0
+14:09:09.832181 IP vit002.lab.it.uc3m.es.50090 > vit001.9999: Flags [F.], seq 16, ack 17, win 64224, options [nop,nop,TS val 91334966 ecr 3518336275], length 0
+14:09:09.832181 IP vit005.lab.it.uc3m.es.54934 > vit001.9999: Flags [F.], seq 8, ack 9, win 64232, options [nop,nop,TS val 3949615207 ecr 3950498365], length 0
+14:09:09.832224 IP vit001.9999 > vit008.lab.it.uc3m.es.35494: Flags [.], ack 9, win 65152, options [nop,nop,TS val 3173867298 ecr 4277185899], length 0
+14:09:09.832323 IP vit001.9999 > vit007.lab.it.uc3m.es.48408: Flags [.], ack 9, win 65152, options [nop,nop,TS val 2366674788 ecr 2787371937], length 0
+14:09:09.832399 IP vit001.9999 > vit004.lab.it.uc3m.es.40536: Flags [.], ack 9, win 65152, options [nop,nop,TS val 2243630629 ecr 1813143942], length 0
+14:09:09.832500 IP vit001.9999 > vit002.lab.it.uc3m.es.50090: Flags [.], ack 17, win 65144, options [nop,nop,TS val 3518336277 ecr 91334966], length 0
+14:09:09.832674 IP vit001.9999 > vit005.lab.it.uc3m.es.54934: Flags [.], ack 9, win 65152, options [nop,nop,TS val 3950498366 ecr 3949615207], length 0
+14:09:09.832764 IP vit003.lab.it.uc3m.es.60520 > vit001.9999: Flags [F.], seq 8, ack 9, win 64232, options [nop,nop,TS val 3446673430 ecr 4264883785], length 0
+14:09:09.832777 IP vit001.9999 > vit003.lab.it.uc3m.es.60520: Flags [.], ack 9, win 65152, options [nop,nop,TS val 4264883787 ecr 3446673430], length 0
+
+73 packets captured
+74 packets received by filter
+0 packets dropped by kernel

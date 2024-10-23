@@ -1,0 +1,8 @@
+[2024-10-23, 14:07:06] ./smart-select 9999
+select process #284730: 1 connected
+select process #284730: 2 connected
+select process #284728: 1 connected
+select process #284729: 1 connected
+select process #284729: 2 connected
+select process #284727: 1 connected
+select process #284728: 2 connected

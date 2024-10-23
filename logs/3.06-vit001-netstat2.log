@@ -1,0 +1,6 @@
+[2024-10-23, 14:18:30] netstat -ptan | grep 9999
+(No info could be read for "-p": geteuid()=493990 but you should be root.)
+tcp        0      0 163.117.171.191:9999    163.117.171.193:50250   TIME_WAIT   -                   
+tcp        0      0 163.117.171.191:9999    163.117.171.194:46208   TIME_WAIT   -                   
+tcp        0      0 163.117.171.191:9999    163.117.171.195:42894   TIME_WAIT   -                   
+tcp        0      0 163.117.171.191:9999    163.117.171.192:44816   TIME_WAIT   -                   
